@@ -1,0 +1,310 @@
+@import "~antd/dist/antd.css";
+
+@font-face {
+  font-family: "Acrom";
+  src: url("./fonts/acrom400.eot");
+  src: local("☺"), url("./fonts/acrom400.woff") format("woff"),
+    url("./fonts/acrom400.ttf") format("truetype"),
+    url("./fonts/acrom400.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFCompactDisplay";
+  src: url("./fonts/SF-Compact-Display-Semibold.eot");
+  src: local("☺"),
+    url("./fonts/SF-Compact-Display-Semibold.woff") format("woff"),
+    url("./fonts/SF-Compact-Display-Semibold.ttf") format("truetype"),
+    url("./fonts/SF-Compact-Display-Semibold.svg") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFCompactDisplay";
+  src: url("./fonts/FontsFree-Net-SFCompactDisplay-Regular.eot");
+  src: local("☺"),
+    url("./fonts/FontsFree-Net-SFCompactDisplay-Regular.woff") format("woff"),
+    url("./fonts/FontsFree-Net-SFCompactDisplay-Regular.ttf") format("truetype"),
+    url("./fonts/FontsFree-Net-SFCompactDisplay-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFProText";
+  src: url("./fonts/FontsFree-Net-SFProText-Medium.eot");
+  src: local("☺"),
+    url("./fonts/FontsFree-Net-SFProText-Medium.woff") format("woff"),
+    url("./fonts/FontsFree-Net-SFProText-Medium.ttf") format("truetype"),
+    url("./fonts/FontsFree-Net-SFProText-Medium.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin menuFont {
+  font-family: Acrom;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #303133;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  height: 100vh;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: space-between;
+    background-color: #fff;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0;
+
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1092px;
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #e4e7ed;
+
+    &__item {
+      @include menuFont;
+      padding: 15px !important;
+      margin: 0 15px !important;
+    }
+
+    &-auth {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      right: 0;
+
+      &__item {
+        @include menuFont;
+        color: #303133 !important;
+        border-color: #ed5992 !important;
+        &.primary {
+          background-color: #ed5992 !important;
+          &:hover {
+            color: #fff !important;
+          }
+        }
+        &:hover:not(:last-child) {
+          color: #ed5992 !important;
+        }
+      }
+
+      &__item:not(:last-child) {
+        margin-right: 1vw;
+      }
+    }
+
+    &__item {
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1350px;
+    align-self: center;
+    align-items: center;
+    margin-top: 40px;
+
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;   
+    }
+
+    &__item {
+      width: 248px;
+      height: 187px;
+      margin-bottom: 35px;
+      
+      &:not(:nth-child(5n)){
+        margin-right: 26px;
+      }
+    }
+
+    &__item img {
+      width: 100%;
+      height: 100%;
+      border-radius: 7px;
+      box-shadow: 2px 11px 28px #C5C5C5 ;
+    }
+
+    &-page {
+      margin-top: 25px;
+    }
+
+    &-modal {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start-;
+
+      &__prew {
+        width:680px;
+        height:510px;
+        
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__name {
+        font-family: Acrom;
+        font-size: 18px;
+        line-height: 18px;
+        color: #2F1767;
+        margin-top: 16px;
+        margin-bottom: 20px;
+      }
+
+      &__desc {
+        font-family: Acrom;
+        font-size: 14px;
+        line-height: 24px;
+        color: #606266;
+      }
+    }
+
+    &-loading {
+      
+      margin-top: 380px;
+      &__load {
+        font-family: Acrom;
+        font-size: 14px;
+        line-height: 19px;
+        color: #303133;
+        margin-top:10px;
+      }
+    }
+    &-connect {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 290px;
+
+      img {
+        border: 2px dashed #D8D8D8;
+
+      }
+      
+      &__title {
+        font-family: SFCompactDisplay;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.24px;
+        color: #2f1767;
+        margin-top: 10px;
+      }
+      &__subtitle {
+        font-family: SFCompactDisplay;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        letter-spacing: 0.24px;
+        color: #4a4a4a;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.ant-menu-item {
+  top: 2px !important;
+
+  &:hover {
+    color: #ed5992 !important;
+    border-bottom: 2px solid #ed5992 !important;
+  }
+
+  &-selected {
+    color: #ed5992 !important;
+    border-bottom: 2px solid #ed5992 !important;
+  }
+    
+}
+
+.ant-pagination-item {
+  background-color: #F0F2F5;
+  border: none;
+
+  &:hover {
+    background-color: #ED5992;
+    border: none;
+  }
+  & a {
+    font-family: SFProText;
+    font-size: 14px;
+    color: #606266;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &-container {
+    background-color: #F0F2F5 !important;
+    &:hover {
+      background-color: #ED5992 !important;
+    }
+    
+  }
+
+  &-active {
+    background-color: #ED5992 !important;
+    
+    & a {
+      color: #fff !important;
+
+    }
+  }
+  &-link {  
+    background-color: #F0F2F5 !important;
+    border: none !important;;
+    &:hover {
+      background-color: #ED5992 !important;
+      & span {
+        & svg {
+          fill: #fff;
+        }
+      }
+    }
+    & span {
+      & svg {
+        fill: #606266;
+        &:hover {
+          fill: #fff;
+
+        }
+      }
+    }
+  }
+}

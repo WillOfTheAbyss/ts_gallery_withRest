@@ -1,0 +1,27 @@
+
+<svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle fill="#31196D" stroke="none" cx="6" cy="6" r="5">
+    <animate
+      attributeName="r"
+      dur="1s"
+      values="6;3.5;6"
+      repeatCount="indefinite"
+      begin="0.1"/>    
+  </circle>
+  <circle fill="#ED5992" stroke="none" cx="30" cy="6" r="6">
+    <animate
+      attributeName="r"
+      dur="1s"
+      values="6;3.5;6"
+      repeatCount="indefinite" 
+      begin="0.2"/>       
+  </circle>
+  <circle fill="#733CE2" stroke="none" cx="54" cy="6" r="3.5">
+    <animate
+      attributeName="r"
+      dur="1s"
+      values="3.5;6;3.5"
+      repeatCount="indefinite" 
+      begin="0.3"/>     
+  </circle>
+</svg>
